@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Showcase | Shantiram Meche</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="pro2.png" type="image/x-icon">
+    <!-- PWA / iOS install support -->
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SM Portfolio">
+    <link rel="apple-touch-icon" href="me.jpg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="Interior Design Showcase by Shantiram Meche">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #ec4899;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-dark: #f1f5f9;
+            --text-light: #cbd5e1;
+            --white: #e2e8f0;
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 50%, #0f172a 100%);
+            background-attachment: fixed;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .back-button i {
+            font-size: 1.1rem;
+        }
+
+        /* Main Container */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .gallery-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-title::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        .gallery-description {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Stats */
+        .gallery-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .gallery-stat {
+            animation: slideInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .gallery-stat:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-stat:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-stat:nth-child(3) { animation-delay: 0.3s; }
+
+        .gallery-stat h3 {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-stat p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: var(--transition);
+            background: var(--card-bg);
+            cursor: pointer;
+            height: 350px;
+            animation: scaleIn 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+        .gallery-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.4);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+            filter: brightness(0.85);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.4));
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .overlay h3 {
+            margin: 0 0 0.8rem 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .overlay p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .overlay-icon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .overlay-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: scale(1.1);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.98);
+            z-index: 2000;
+            padding: 2rem;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 85vh;
+            display: block;
+            width: auto;
+            height: auto;
+            margin: auto;
+        }
+
+        .modal-info {
+            padding: 2rem;
+            background: var(--white);
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: var(--white);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2001;
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg) scale(1.1);
+            color: var(--primary-color);
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2001;
+        }
+
+        .modal-nav:hover {
+            color: var(--primary-color);
+            transform: translateY(-50%) scale(1.2);
+        }
+
+        .modal-prev {
+            left: 1.5rem;
+        }
+
+        .modal-next {
+            right: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px) scaleX(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) scaleX(1);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            header {
+                padding: 0.8rem 1rem;
+            }
+
+            .gallery-title {
+                font-size: 1.5rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 2rem 1rem;
+            }
+
+            .gallery-item {
+                height: 250px;
+            }
+
+            .back-button {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .back-button i {
+                margin-right: 0.3rem;
+            }
+
+            .close-modal {
+                font-size: 1.8rem;
+                width: 40px;
+                height: 40px;
+            }
+
+            .modal-nav {
+                font-size: 1.3rem;
+            }
+
+            .modal-image {
+                max-width: 95vw;
+                max-height: 60vh;
+            }
+
+            .gallery-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 2rem 1rem;
+            }
+
+            .stat-item h3 {
+                font-size: 1.3rem;
+            }
+
+            .gallery-container {
+                padding: 2rem 1rem;
+            }
+
+            .header-container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .gallery-item {
+                height: 280px;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+            }
+
+            .gallery-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item {
+                height: 320px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        /* Landscape orientation phones */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header {
+                height: auto;
+            }
+
+            .gallery-container {
+                padding: 2rem 1rem;
+            }
+
+            .gallery {
+                gap: 1rem;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+        }
+
+        /* Accessibility - Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            header,
+            .back-button {
+                display: none;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-item {
+                page-break-inside: avoid;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="gallery-container">
+        <div class="gallery-header">
+            <h1 class="gallery-title">Interior Design Showcase</h1>
+            <p class="gallery-description">A carefully curated collection of stunning interior design projects featuring modern aesthetics, minimalist principles, and user-centric design thinking.</p>
+            <div class="gallery-stats">
+                <div class="gallery-stat">
+                    <h3>150+</h3>
+                    <p>Designs Created</p>
+                </div>
+                <div class="gallery-stat">
+                    <h3>95%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="gallery-stat">
+                    <h3>8+</h3>
+                    <p>Years Excellence</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item" onclick="openModal(0)">
+                <img src="1.jpg" alt="Sunset Beach - Serene Coastal Design">
+                <div class="overlay-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="overlay">
+                    <h3>Sunset Beach</h3>
+                    <p>Serene coastal design with warm tones and natural textures</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(1)">
+                <img src="2.jpg" alt="Mountain Peak - Alpine Design Inspiration">
+                <div class="overlay-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="overlay">
+                    <h3>Mountain Peak</h3>
+                    <p>Majestic alpine design with cool colors and sophisticated elements</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(2)">
+                <img src="3.jpg" alt="City Lights - Urban Modern Design">
+                <div class="overlay-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="overlay">
+                    <h3>City Lights</h3>
+                    <p>Contemporary urban design with bold accents and modern furniture</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(3)">
+                <img src="4.jpg" alt="Forest Trail - Natural Minimalist Design">
+                <div class="overlay-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="overlay">
+                    <h3>Forest Trail</h3>
+                    <p>Minimalist nature-inspired design with earthy tones</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(4)">
+                <img src="5.jpg" alt="Desert Dunes - Warm Minimalist Aesthetic">
+                <div class="overlay-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="overlay">
+                    <h3>Desert Dunes</h3>
+                    <p>Warm desert-inspired minimalist aesthetic with open spaces</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(5)">
+                <img src="2.jpg" alt="Aurora Borealis - Celestial Design Theme">
+                <div class="overlay-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="overlay">
+                    <h3>Aurora Borealis</h3>
+                    <p>Celestial-inspired design with ethereal colors and dynamic lighting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying full-size images -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <span class="modal-nav modal-prev" onclick="previousImage()">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="Full size gallery image">
+            <div class="modal-info">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+            </div>
+        </div>
+        <span class="modal-nav modal-next" onclick="nextImage()">
+            <i class="fas fa-chevron-right"></i>
+        </span>
+    </div>
+
+    <script>
+        const galleryItems = [
+            {
+                src: '1.jpg',
+                title: 'Sunset Beach',
+                description: 'A serene coastal design featuring warm tones, natural textures, and open spaces. This minimalist approach creates a peaceful environment perfect for relaxation and contemplation.'
+            },
+            {
+                src: '2.jpg',
+                title: 'Mountain Peak',
+                description: 'Majestic alpine design with cool colors, sophisticated elements, and bold architectural features. Perfect for creating a luxurious and modern atmosphere that inspires.'
+            },
+            {
+                src: '3.jpg',
+                title: 'City Lights',
+                description: 'Contemporary urban design with dynamic accents, modern furniture, and artistic installations. Ideal for creating vibrant, energetic spaces that pulse with creativity.'
+            },
+            {
+                src: '4.jpg',
+                title: 'Forest Trail',
+                description: 'Minimalist nature-inspired design with earthy tones, organic textures, and sustainable materials. Creates a calm, grounding environment for wellness and peace.'
+            },
+            {
+                src: '5.jpg',
+                title: 'Desert Dunes',
+                description: 'Warm desert-inspired minimalist aesthetic with open spaces, neutral colors, and sculptural elements. Emphasizes simplicity and timeless elegance.'
+            },
+            {
+                src: '2.jpg',
+                title: 'Aurora Borealis',
+                description: 'Celestial-inspired design with ethereal colors, dynamic lighting, and geometric patterns. Creates an enchanting and otherworldly atmosphere that captivates.'
+            }
+        ];
+
+        let currentImageIndex = 0;
+
+        function openModal(index) {
+            currentImageIndex = index;
+            const item = galleryItems[index];
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+
+            modalImg.src = item.src;
+            modalTitle.textContent = item.title;
+            modalDescription.textContent = item.description;
+            modal.classList.add('active');
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            
+            // Trigger animation
+            modalImg.style.animation = 'none';
+            setTimeout(() => {
+                modalImg.style.animation = 'scaleIn 0.4s ease forwards';
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryItems.length;
+            updateModalContent();
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateModalContent();
+        }
+
+        function updateModalContent() {
+            const item = galleryItems[currentImageIndex];
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+
+            // Add transition animation
+            modalImg.style.animation = 'fadeOut 0.3s ease forwards';
+            
+            setTimeout(() => {
+                modalImg.src = item.src;
+                modalTitle.textContent = item.title;
+                modalDescription.textContent = item.description;
+                modalImg.style.animation = 'scaleIn 0.4s ease forwards';
+            }, 300);
+        }
+
+        // Keyboard navigation
+        window.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('imageModal');
+            if (modal.classList.contains('active')) {
+                if (event.key === 'Escape') {
+                    closeModal();
+                } else if (event.key === 'ArrowRight') {
+                    nextImage();
+                } else if (event.key === 'ArrowLeft') {
+                    previousImage();
+                }
+            }
+        });
+
+        // Click outside modal to close
+        document.getElementById('imageModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+        // Add fade animations to gallery items on load
+        window.addEventListener('load', () => {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach((item, index) => {
+                item.style.animation = `scaleIn 0.6s ease forwards`;
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Animate gallery stats
+            const stats = document.querySelectorAll('.gallery-stat');
+            stats.forEach((stat, index) => {
+                stat.style.animation = `slideInUp 0.6s ease forwards`;
+                stat.style.animationDelay = `${(index + 1) * 0.1}s`;
+            });
+        });
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+            @keyframes scaleIn {
+                from {
+                    opacity: 0;
+                    transform: scale(0.9);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('SW registered', reg))
+                    .catch(err => console.error('SW failed', err));
+            });
+        }
+    </script>
+</body>
+</html>
