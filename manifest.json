@@ -13,61 +13,61 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "72x72",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "96x96",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "128x128",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "144x144",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "152x152",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "192x192",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "384x384",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "512x512",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "192x192",
       "type": "image/jpeg",
       "purpose": "maskable"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "512x512",
       "type": "image/jpeg",
       "purpose": "maskable"
@@ -75,14 +75,14 @@
   ],
   "screenshots": [
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "540x720",
       "type": "image/jpeg",
       "form_factor": "narrow",
       "label": "Portfolio Mobile View"
     },
     {
-      "src": "./me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "1280x720",
       "type": "image/jpeg",
       "form_factor": "wide",
@@ -97,7 +97,7 @@
       "url": "/shantiram_meche/?source=pwa-shortcut",
       "icons": [
         {
-          "src": "./me.jpeg",
+          "src": "/shantiram_meche/me.jpeg",
           "sizes": "192x192",
           "type": "image/jpeg"
         }

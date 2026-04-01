@@ -1,15 +1,15 @@
 // Version name (change when you update files)
-const CACHE_NAME = "pwa-cache-v5";
+const CACHE_NAME = "pwa-cache-v6";
 
 // Files to cache
 const ASSETS_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./about.html",
-  "./services.html",
-  "./portfolio.html",
-  "./manifest.json",
-  "./me.jpeg"
+  "/shantiram_meche/",
+  "/shantiram_meche/index.html",
+  "/shantiram_meche/about.html",
+  "/shantiram_meche/services.html",
+  "/shantiram_meche/portfolio.html",
+  "/shantiram_meche/manifest.json",
+  "/shantiram_meche/me.jpeg"
 ];
 
 // 🔹 Install event – cache files
@@ -55,7 +55,7 @@ self.addEventListener("fetch", (event) => {
         .catch(() => {
           // Fallback to cache if network fails
           return caches.match(event.request).then((cachedResponse) => {
-            return cachedResponse || caches.match("./index.html");
+            return cachedResponse || caches.match("/shantiram_meche/index.html");
           });
         })
     );
