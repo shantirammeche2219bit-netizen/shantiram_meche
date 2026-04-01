@@ -1,5 +1,5 @@
 // Version name (change when you update files)
-const CACHE_NAME = "pwa-cache-v7";
+const CACHE_NAME = "pwa-cache-v8";
 
 // Files to cache
 const ASSETS_TO_CACHE = [
@@ -8,6 +8,7 @@ const ASSETS_TO_CACHE = [
   "/shantiram_meche/about.html",
   "/shantiram_meche/services.html",
   "/shantiram_meche/portfolio.html",
+  "/shantiram_meche/photo.html",
   "/shantiram_meche/manifest.json",
   "/shantiram_meche/me.jpeg"
 ];
@@ -72,7 +73,7 @@ self.addEventListener("fetch", (event) => {
       return fetch(event.request)
         .then((response) => {
           // Cache successful responses
-          if (!response || response.status !== 200 || response.type !== "basic") {
+          if (!response || response.status !== 200 || (response.type !== "basic" && response.type !== "cors")) {
             // If we have it in cache, return it anyway even if network fetch isn't 200
             return caches.match(event.request).then((cached) => {
                 if (cached) return cached;
