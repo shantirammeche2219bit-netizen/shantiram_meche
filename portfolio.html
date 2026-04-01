@@ -6,7 +6,7 @@
     <title>Portfolio | Client Success Stories - Frame Syndicate</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="me.jpg" type="image/jpeg">
-    <meta name="theme-color" content="#1A1A2E">
+    <meta name="theme-color" content="#1A3A52">
     <meta name="description" content="Frame Syndicate Portfolio - Client success stories, case studies, and completed projects">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +78,36 @@
         }
 
         .nav-link:hover {
-            color: var(--yellow);
+            color: var(--maroon);
+        }
+
+        /* Hamburger for mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--navy);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Hamburger active state */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
         }
 
         main {
@@ -110,7 +139,7 @@
         .yellow-bar {
             width: 100px;
             height: 4px;
-            background: var(--yellow);
+            background: var(--maroon);
             margin: 1.5rem auto;
         }
 
@@ -219,7 +248,7 @@
             right: -10%;
             width: 40%;
             height: 40%;
-            background: var(--yellow);
+            background: var(--maroon);
             opacity: 0.08;
             border-radius: 50%;
         }
@@ -234,7 +263,7 @@
         }
 
         .testimonials h2 .text-yellow {
-            color: var(--yellow);
+            color: var(--maroon);
         }
 
         .testimonials-grid {
@@ -279,7 +308,7 @@
             left: -10%;
             width: 40%;
             height: 40%;
-            background: var(--yellow);
+            background: var(--maroon);
             opacity: 0.08;
             border-radius: 50%;
         }
@@ -352,6 +381,45 @@
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                box-shadow: 0 4px 10px rgba(26, 26, 46, 0.1);
+                padding: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .nav-links.active {
+                max-height: 300px;
+                padding: 1rem 0;
+            }
+
+            .nav-links li {
+                padding: 0;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 1rem 2rem;
+                border-bottom: 1px solid #f5f5f5;
+            }
+
+            .nav-link:hover {
+                background: var(--light-bg);
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
     </style>
 </head>
@@ -365,6 +433,11 @@
                 <li><a href="./about.html" class="nav-link">About</a></li>
                 <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -482,5 +555,28 @@
     <footer>
         <p>&copy; 2026 Shantiram Meche. All rights reserved. | Frame Syndicate</p>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.style.display = 'none';
+                });
+            });
+        }
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
 </body>
 </html>

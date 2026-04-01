@@ -1,11 +1,13 @@
 // Version name (change when you update files)
-const CACHE_NAME = "pwa-cache-v3";
+const CACHE_NAME = "pwa-cache-v4";
 
 // Files to cache
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
-  "./photo.html",
+  "./about.html",
+  "./services.html",
+  "./portfolio.html",
   "./manifest.json",
   "./me.jpeg"
 ];
