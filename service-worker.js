@@ -1,5 +1,5 @@
 // Version name (change when you update files)
-const CACHE_NAME = "pwa-cache-v8";
+const CACHE_NAME = "pwa-cache-v9";
 
 // Files to cache
 const ASSETS_TO_CACHE = [
@@ -10,7 +10,8 @@ const ASSETS_TO_CACHE = [
   "/shantiram_meche/portfolio.html",
   "/shantiram_meche/photo.html",
   "/shantiram_meche/manifest.json",
-  "/shantiram_meche/me.jpeg"
+  "/shantiram_meche/me.jpeg",
+  "/shantiram_meche/pro2.png"
 ];
 
 // 🔹 Install event – cache files

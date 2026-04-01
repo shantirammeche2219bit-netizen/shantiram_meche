@@ -2,7 +2,7 @@
   "name": "Shantiram Meche | CEO & Founder of Frame Syndicate",
   "short_name": "Shantiram Meche",
   "description": "Shantiram Meche - CEO & Founder of Frame Syndicate. Award-Winning Digital Transformation Leader specializing in Enterprise IT Solutions.",
-  "start_url": "/shantiram_meche/index.html",
+  "start_url": "/shantiram_meche/",
   "scope": "/shantiram_meche/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -22,18 +22,6 @@
       "sizes": "512x512",
       "type": "image/jpeg",
       "purpose": "any"
-    },
-    {
-      "src": "/shantiram_meche/me.jpeg",
-      "sizes": "192x192",
-      "type": "image/jpeg",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/shantiram_meche/me.jpeg",
-      "sizes": "512x512",
-      "type": "image/jpeg",
-      "purpose": "maskable"
     }
   ]
 }
