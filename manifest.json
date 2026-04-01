@@ -94,7 +94,7 @@
       "name": "View Portfolio",
       "short_name": "Portfolio",
       "description": "View my portfolio",
-      "url": "/?source=pwa-shortcut",
+      "url": "/shantiram_meche/?source=pwa-shortcut",
       "icons": [
         {
           "src": "./me.jpeg",

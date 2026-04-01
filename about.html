@@ -6,8 +6,9 @@
     <title>About Shantiram Meche | Frame Syndicate CEO</title>
     
     <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/shantiram_meche/manifest.json">
     <link rel="icon" href="me.jpeg" type="image/jpeg">
+    <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/about.html">
     <meta name="theme-color" content="#1A3A52">
     <meta name="description" content="Meet Shantiram Meche - CEO, entrepreneur, and digital transformation leader">
     
@@ -479,7 +480,11 @@
         }
 
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js');
+            navigator.serviceWorker.register('/shantiram_meche/service-worker.js', {
+                scope: '/shantiram_meche/'
+            }).catch((error) => {
+                console.error('Service Worker registration failed:', error);
+            });
         }
     </script>
 </body>
