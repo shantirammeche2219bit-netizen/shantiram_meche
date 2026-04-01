@@ -830,10 +830,12 @@
 
         // Service Worker Registration
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./service-worker.js')
-                    .then(reg => console.log('SW registered', reg))
-                    .catch(err => console.error('SW failed', err));
+            navigator.serviceWorker.register('/shantiram_meche/service-worker.js', {
+                scope: '/shantiram_meche/'
+            }).then(reg => {
+                console.log('Service Worker registered with scope:', reg.scope);
+            }).catch((error) => {
+                console.error('Service Worker registration failed:', error);
             });
         }
     </script>
