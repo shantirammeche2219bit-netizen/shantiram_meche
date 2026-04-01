@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Success Stories | Frame Syndicate Portfolio</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="me.jpg" type="image/jpeg">
+    <meta name="theme-color" content="#1E3A5F">
+    <meta name="description" content="Frame Syndicate Portfolio - Case studies of successful digital transformation projects and enterprise solutions delivered across industries under CEO Shantiram Meche">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1E3A5F;
+            --secondary-color: #0066CC;
+            --accent-color: #4A90E2;
+            --neutral-dark: #2C3E50;
+            --neutral-gray: #7F8C8D;
+            --neutral-light: #ECF0F1;
+            --card-bg: #FFFFFF;
+            --border-color: #BDC3C7;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background: #FAFBFC;
+        }
+
+        header {
+            background-color: var(--white);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .portfolio-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            background: var(--neutral-light);
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .portfolio-link:hover {
+            transform: translateX(5px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .stat-card:nth-child(2) {
+            border-top-color: var(--secondary-color);
+        }
+
+        .stat-card:nth-child(3) {
+            border-top-color: var(--accent-color);
+        }
+
+        .stat-card:nth-child(4) {
+            border-top-color: var(--primary-color);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin-top: 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo-link">Shantiram Meche</a>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="./portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="./about.html" class="nav-link"><i class="fas fa-user"></i> About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Client Success Stories</h1>
+        <p class="subtitle">Case studies of transformational projects and measurable business impact</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Team Experts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">💼</div>
+                <div class="portfolio-content">
+                    <span class="portfolio-tag">Enterprise</span>
+                    <h3>Global Finance Platform</h3>
+                    <p>Built a scalable enterprise financial platform serving corporate clients worldwide with real-time transaction processing and advanced analytics.</p>
+                    <a href="#" class="portfolio-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">🛒</div>
+                <div class="portfolio-content">
+                    <span class="portfolio-tag">E-commerce</span>
+                    <h3>Retail Innovation Platform</h3>
+                    <p>Developed a modern e-commerce platform with advanced inventory management, payment integration, and customer analytics.</p>
+                    <a href="#" class="portfolio-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">🏥</div>
+                <div class="portfolio-content">
+                    <span class="portfolio-tag">Healthcare</span>
+                    <h3>MedTech Solutions</h3>
+                    <p>Created healthcare technology solutions for patient management, appointment scheduling, and telemedicine capabilities.</p>
+                    <a href="#" class="portfolio-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">🌐</div>
+                <div class="portfolio-content">
+                    <span class="portfolio-tag">IoT</span>
+                    <h3>Smart City Network</h3>
+                    <p>Implemented IoT solutions connecting smart devices across urban infrastructure for real-time monitoring and optimization.</p>
+                    <a href="#" class="portfolio-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">🚀</div>
+                <div class="portfolio-content">
+                    <span class="portfolio-tag">Startup</span>
+                    <h3>Innovation Hub MVP</h3>
+                    <p>Developed MVP for promising startup with rapid prototyping, user testing, and iterative improvements.</p>
+                    <a href="#" class="portfolio-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">📱</div>
+                <div class="portfolio-content">
+                    <span class="portfolio-tag">Mobile</span>
+                    <h3>Cross-Platform App</h3>
+                    <p>Built native iOS and Android applications with offline capabilities, real-time synchronization, and modern UI/UX.</p>
+                    <a href="#" class="portfolio-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <h2>Have a Project in Mind?</h2>
+            <p>Let's discuss how Frame Syndicate can help you achieve your digital goals with innovative solutions.</p>
+            <a href="./index.html#contact" class="cta-button">Contact Us Today</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shantiram Meche, CEO of Frame Syndicate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

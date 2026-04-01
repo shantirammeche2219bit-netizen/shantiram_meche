@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Profile | Shantiram Meche | Frame Syndicate CEO</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="me.jpg" type="image/jpeg">
+    <meta name="theme-color" content="#1E3A5F">
+    <meta name="description" content="Learn about Shantiram Meche - CEO and Founder of Frame Syndicate">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1E3A5F;
+            --secondary-color: #0066CC;
+            --accent-color: #4A90E2;
+            --neutral-dark: #2C3E50;
+            --neutral-gray: #7F8C8D;
+            --neutral-light: #ECF0F1;
+            --card-bg: #FFFFFF;
+            --border-color: #BDC3C7;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: #FAFBFC;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--white);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 2rem;
+        }
+
+        .about-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .about-hero img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .about-hero h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-hero p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid var(--primary-color);
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .achievement-card:hover {
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .achievement-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .values-section {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin: 4rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .values-section h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .value-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .value-item h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 1rem;
+                margin-top: 80px;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo-link">Shantiram Meche</a>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="./portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="./about.html" class="nav-link"><i class="fas fa-user"></i> About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div>
+                <h1>Shantiram Meche</h1>
+                <h2>Chief Executive Officer & Founder</h2>
+                <p>With over a decade of experience in enterprise technology and strategic leadership, I have successfully built and scaled Frame Syndicate from vision to market leader in digital solutions. My executive approach combines deep technical expertise with visionary business sense.</p>
+                <p>As CEO, I am dedicated to fostering innovation, driving operational excellence, and building lasting partnerships with enterprise clients worldwide. My leadership philosophy centers on integrity, measurable results, and sustainable growth.</p>
+                <p>From architecting complex enterprise systems to building high-performing teams, my career has been defined by a commitment to delivering transformative solutions that drive real business value.</p>
+            </div>
+            <img src="me.jpg" alt="Shantiram Meche - CEO">
+        </section>
+
+        <section class="achievements">
+            <div class="achievement-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Strategic Growth</h3>
+                <p>Led company through rapid scaling, achieving 300% revenue growth while maintaining service quality and client satisfaction.</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-users"></i>
+                <h3>Team Leadership</h3>
+                <p>Built and developed a diverse team of 50+ technology professionals across multiple locations and specializations.</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Enterprise Solutions</h3>
+                <p>Established trusted partnerships with Fortune 500 companies and leading organizations across industries.</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-globe"></i>
+                <h3>Global Impact</h3>
+                <p>Serving clients worldwide with innovative solutions and world-class support spanning multiple continents.</p>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <h2>Guiding Principles</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Innovation</h4>
+                    <p>Driving continuous technological advancement and forward-thinking solutions</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Excellence</h4>
+                    <p>Delivering consistently high-quality solutions that exceed expectations</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Integrity</h4>
+                    <p>Building trust through transparent and honest business practices</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Growth</h4>
+                    <p>Fostering continuous improvement and helping clients achieve ambitious goals</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shantiram Meche, CEO of Frame Syndicate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,15 +1,15 @@
 {
-  "name": "Shantiram Meche | Full Stack Developer",
-  "short_name": "SM Portfolio",
-  "description": "Portfolio of Shantiram Meche — Full Stack Developer specializing in React, Node.js, and modern web technologies.",
+  "name": "Shantiram Meche | CEO & Founder of Frame Syndicate",
+  "short_name": "Shantiram Meche",
+  "description": "Shantiram Meche - CEO & Founder of Frame Syndicate. Award-Winning Digital Transformation Leader specializing in Enterprise IT Solutions.",
   "start_url": "/shantiram_meche/index.html",
   "scope": "/shantiram_meche/",
   "id": "/shantiram_meche/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#6366f1",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1E3A5F",
   "orientation": "portrait-primary",
-  "categories": ["portfolio", "developer", "technology"],
+  "categories": ["technology", "business", "enterprise"],
   "prefer_related_applications": false,
   "icons": [
     {

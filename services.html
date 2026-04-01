@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Services | Frame Syndicate</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="me.jpg" type="image/jpeg">
+    <meta name="theme-color" content="#1E3A5F">
+    <meta name="description" content="Frame Syndicate Enterprise Services - Cloud Infrastructure, Enterprise Software, Cybersecurity, AI/ML Solutions, and Strategic IT Consulting">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1E3A5F;
+            --secondary-color: #0066CC;
+            --accent-color: #4A90E2;
+            --neutral-dark: #2C3E50;
+            --neutral-gray: #7F8C8D;
+            --neutral-light: #ECF0F1;
+            --card-bg: #FFFFFF;
+            --border-color: #BDC3C7;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: #FAFBFC;
+        }
+
+        header {
+            background-color: var(--white);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--primary-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:nth-child(2) {
+            border-top-color: var(--secondary-color);
+        }
+
+        .service-card:nth-child(3) {
+            border-top-color: var(--accent-color);
+        }
+
+        .service-card:nth-child(4) {
+            border-top-color: var(--primary-color);
+        }
+
+        .service-card:nth-child(5) {
+            border-top-color: var(--secondary-color);
+        }
+
+        .service-card:nth-child(6) {
+            border-top-color: var(--accent-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .service-card:nth-child(2) .service-icon {
+            color: var(--secondary-color);
+        }
+
+        .service-card:nth-child(3) .service-icon {
+            color: var(--accent-color);
+        }
+
+        .service-card:nth-child(4) .service-icon {
+            color: var(--primary-color);
+        }
+
+        .service-card:nth-child(5) .service-icon {
+            color: var(--secondary-color);
+        }
+
+        .service-card:nth-child(6) .service-icon {
+            color: var(--accent-color);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin-top: 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo-link">Shantiram Meche</a>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="./portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="./about.html" class="nav-link"><i class="fas fa-user"></i> About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Enterprise Solutions</h1>
+        <p class="subtitle">Advanced technology services driving digital transformation and business growth</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud Infrastructure</h3>
+                <p>Scalable cloud architecture, migration, and management. Multi-cloud strategies optimized for security, performance, and cost efficiency across global enterprises.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h3>Enterprise Software Development</h3>
+                <p>Custom application development using modern technology stacks. End-to-end solutions from architecture through deployment, ensuring scalability and reliability.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Cybersecurity & Risk Management</h3>
+                <p>Comprehensive security frameworks, threat detection, and compliance management. Protect your critical assets with enterprise-grade security solutions.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI & Advanced Analytics</h3>
+                <p>Machine learning solutions, predictive analytics, and intelligent automation. Unlock insights from your data and automate complex business processes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Digital Strategy & Transformation</h3>
+                <p>Strategic consulting for digital modernization and business optimization. Navigate technology change with expert guidance and proven methodologies.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-users"></i></div>
+                <h3>IT Staffing & Managed Services</h3>
+                <p>Expert technical teams and managed IT services for enterprise operations. Augment your capabilities with skilled professionals and ongoing support.</p>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <h2>Schedule a Strategic Consultation</h2>
+            <p>Discover how our enterprise solutions can address your organization's most critical challenges and unlock new growth opportunities.</p>
+            <a href="./index.html#contact" class="cta-button">Request Consultation</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shantiram Meche, CEO of Frame Syndicate. All rights reserved.</p>
+    </footer>
+</body>
+</html>
