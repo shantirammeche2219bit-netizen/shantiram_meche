@@ -7,7 +7,7 @@ const ASSETS_TO_CACHE = [
   "./index.html",
   "./photo.html",
   "./manifest.json",
-  "./me.jpg"
+  "./me.jpeg"
 ];
 
 // 🔹 Install event – cache files

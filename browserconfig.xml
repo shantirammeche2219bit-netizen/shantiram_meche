@@ -4,7 +4,7 @@
         <tile>
             <square150x150logo src="me.jpg"/>
             <square310x310logo src="me.jpg"/>
-            <TileColor>#1E3A5F</TileColor>
+            <TileColor>#1A3A52</TileColor>
             <TileImage src="me.jpg"/>
         </tile>
         <notification>

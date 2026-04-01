@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Profile | Shantiram Meche | Frame Syndicate CEO</title>
+    <title>About Shantiram Meche | Frame Syndicate CEO</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="me.jpg" type="image/jpeg">
-    <meta name="theme-color" content="#1E3A5F">
-    <meta name="description" content="Learn about Shantiram Meche - CEO and Founder of Frame Syndicate">
+    <meta name="theme-color" content="#1A1A2E">
+    <meta name="description" content="Meet Shantiram Meche - CEO, entrepreneur, and digital transformation leader">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -20,77 +20,71 @@
         }
 
         :root {
-            --primary-color: #1E3A5F;
-            --secondary-color: #0066CC;
-            --accent-color: #4A90E2;
-            --neutral-dark: #2C3E50;
-            --neutral-gray: #7F8C8D;
-            --neutral-light: #ECF0F1;
-            --card-bg: #FFFFFF;
-            --border-color: #BDC3C7;
-            --text-dark: #2C3E50;
-            --text-light: #7F8C8D;
+            --navy: #1A3A52;
+            --dark-navy: #0F1D2E;
+            --maroon: #8B3A44;
+            --pink: #D4A5A5;
+            --light-bg: #F5EFE7;
             --white: #FFFFFF;
-            --border-radius: 8px;
+            --text-dark: #2C1810;
+            --text-gray: #5C4A45;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Poppins', sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
             color: var(--text-dark);
-            background: #FAFBFC;
-            overflow-x: hidden;
         }
 
         header {
-            background-color: var(--white);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            position: fixed;
-            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(26, 26, 46, 0.1);
+            position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-link {
+        .logo {
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-weight: 800;
+            color: var(--navy);
             text-decoration: none;
-            letter-spacing: -1px;
+        }
+
+        .logo-yellow {
+            color: var(--maroon);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .nav-link {
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            transition: all 0.3s;
+            transition: color 0.3s;
         }
 
         .nav-link:hover {
-            color: var(--primary-color);
+            color: var(--yellow);
         }
 
         main {
-            max-width: 1200px;
-            margin: 100px auto 0;
-            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
 
         .about-hero {
@@ -101,125 +95,160 @@
             margin-bottom: 6rem;
         }
 
-        .about-hero img {
-            width: 100%;
-            border-radius: var(--border-radius);
-            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
-        }
-
         .about-hero h1 {
             font-size: 3rem;
-            color: var(--text-dark);
+            font-weight: 800;
+            color: var(--navy);
             margin-bottom: 1rem;
-            font-weight: 700;
         }
 
         .about-hero h2 {
-            font-size: 1.8rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--yellow);
+            margin-bottom: 2rem;
         }
 
         .about-hero p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            line-height: 1.8;
+            line-height: 1.7;
+            color: var(--text-gray);
             margin-bottom: 1rem;
+        }
+
+        .about-image {
+            position: relative;
+            background: var(--white);
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(26, 26, 46, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .image-accent {
+            position: absolute;
+            background: var(--yellow);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .image-accent-1 {
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-accent-2 {
+            bottom: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 3rem;
+            text-align: center;
         }
 
         .achievements {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 6rem;
         }
 
         .achievement-card {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            border-left: 4px solid var(--primary-color);
-            text-align: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--white);
+            padding: 2.5rem;
+            border-left: 5px solid var(--maroon);
+            box-shadow: 0 10px 30px rgba(26, 26, 46, 0.08);
+            transition: all 0.3s;
         }
 
         .achievement-card:hover {
-            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
-            transform: translateY(-4px);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(26, 26, 46, 0.15);
         }
 
-        .achievement-card i {
+        .achievement-icon {
             font-size: 2.5rem;
-            color: var(--primary-color);
+            color: var(--maroon);
             margin-bottom: 1rem;
         }
 
         .achievement-card h3 {
             font-size: 1.3rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
+            color: var(--navy);
+            margin-bottom: 0.8rem;
         }
 
         .achievement-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.6;
         }
 
-        .values-section {
-            background: var(--card-bg);
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            margin: 4rem 0;
-            border: 1px solid var(--border-color);
+        .values {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem;
+            margin-bottom: 6rem;
         }
 
-        .values-section h2 {
+        .values h2 {
             font-size: 2.2rem;
-            color: var(--text-dark);
-            margin-bottom: 2rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
             text-align: center;
+            color: var(--maroon);
         }
 
         .values-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
         }
 
-        .value-item {
+        .value-card {
+            background: var(--dark-navy);
+            padding: 2rem;
+            border-top: 4px solid var(--maroon);
             text-align: center;
-            padding: 1.5rem;
+            transition: all 0.3s;
         }
 
-        .value-item i {
-            font-size: 2rem;
-            color: var(--primary-color);
+        .value-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .value-item h4 {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
+        .value-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
         }
 
-        .value-item p {
-            color: var(--text-light);
-            font-size: 0.9rem;
+        .value-card p {
+            color: #ddd;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
+            background: var(--dark-navy);
+            color: var(--white);
             padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: underline;
+            text-align: center;
+            border-top: 4px solid var(--maroon);
         }
 
         @media (max-width: 768px) {
@@ -231,18 +260,12 @@
                 font-size: 2rem;
             }
 
-            main {
-                padding: 1rem;
-                margin-top: 80px;
+            .achievements {
+                grid-template-columns: 1fr;
             }
 
-            header {
-                padding: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
+            .values-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -250,12 +273,12 @@
 <body>
     <header>
         <nav>
-            <a href="./index.html" class="logo-link">Shantiram Meche</a>
+            <a href="./index.html" class="logo">Shantiram <span class="logo-yellow">Meche</span></a>
             <ul class="nav-links">
-                <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="./services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
-                <li><a href="./portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a></li>
-                <li><a href="./about.html" class="nav-link"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="./index.html#services" class="nav-link">Services</a></li>
+                <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -264,66 +287,78 @@
         <section class="about-hero">
             <div>
                 <h1>Shantiram Meche</h1>
-                <h2>Chief Executive Officer & Founder</h2>
-                <p>With over a decade of experience in enterprise technology and strategic leadership, I have successfully built and scaled Frame Syndicate from vision to market leader in digital solutions. My executive approach combines deep technical expertise with visionary business sense.</p>
-                <p>As CEO, I am dedicated to fostering innovation, driving operational excellence, and building lasting partnerships with enterprise clients worldwide. My leadership philosophy centers on integrity, measurable results, and sustainable growth.</p>
-                <p>From architecting complex enterprise systems to building high-performing teams, my career has been defined by a commitment to delivering transformative solutions that drive real business value.</p>
+                <h2>CEO & Founder | Digital Transformation Leader</h2>
+                <p>With over a decade of experience in enterprise technology and business leadership, I have built Frame Syndicate into a trusted partner for digital transformation across industries.</p>
+                <p>My journey combines deep technical expertise with strategic business acumen. I'm passionate about helping organizations unlock their potential through innovative technology solutions, transforming challenges into opportunities, and building teams that deliver excellence.</p>
+                <p>Beyond business, I'm committed to fostering innovation, mentoring emerging tech leaders, and contributing to the advancement of digital excellence globally.</p>
             </div>
-            <img src="me.jpg" alt="Shantiram Meche - CEO">
+
+            <div class="about-image">
+                <img src="me.jpg" alt="Shantiram Meche">
+                <div class="image-accent image-accent-1"></div>
+                <div class="image-accent image-accent-2"></div>
+            </div>
         </section>
 
-        <section class="achievements">
+        <h2 class="section-title">Key Achievements</h2>
+        <div class="achievements">
             <div class="achievement-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Strategic Growth</h3>
-                <p>Led company through rapid scaling, achieving 300% revenue growth while maintaining service quality and client satisfaction.</p>
+                <div class="achievement-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Rapid Growth</h3>
+                <p>Scaled Frame Syndicate to 300% revenue growth while maintaining exceptional service quality and client satisfaction ratios.</p>
             </div>
+
             <div class="achievement-card">
-                <i class="fas fa-users"></i>
-                <h3>Team Leadership</h3>
-                <p>Built and developed a diverse team of 50+ technology professionals across multiple locations and specializations.</p>
+                <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                <h3>Team Building</h3>
+                <p>Built and mentored a diverse team of 50+ technology professionals across global locations and specializations.</p>
             </div>
+
             <div class="achievement-card">
-                <i class="fas fa-briefcase"></i>
-                <h3>Enterprise Solutions</h3>
-                <p>Established trusted partnerships with Fortune 500 companies and leading organizations across industries.</p>
+                <div class="achievement-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Enterprise Partnerships</h3>
+                <p>Established trusted relationships with Fortune 500 companies and leading organizations across multiple sectors.</p>
             </div>
+
             <div class="achievement-card">
-                <i class="fas fa-globe"></i>
+                <div class="achievement-icon"><i class="fas fa-globe"></i></div>
                 <h3>Global Impact</h3>
-                <p>Serving clients worldwide with innovative solutions and world-class support spanning multiple continents.</p>
+                <p>Delivering transformative solutions to clients across continents, driving innovation and sustainable business growth.</p>
             </div>
-        </section>
+        </div>
 
-        <section class="values-section">
-            <h2>Guiding Principles</h2>
+        <section class="values">
+            <h2>Core Values</h2>
             <div class="values-grid">
-                <div class="value-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h4>Innovation</h4>
-                    <p>Driving continuous technological advancement and forward-thinking solutions</p>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Innovation</h3>
+                    <p>Continuously pushing boundaries and exploring emerging technologies to drive progress.</p>
                 </div>
-                <div class="value-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Excellence</h4>
-                    <p>Delivering consistently high-quality solutions that exceed expectations</p>
+
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Excellence</h3>
+                    <p>Committed to delivering world-class solutions that exceed expectations and create lasting impact.</p>
                 </div>
-                <div class="value-item">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Integrity</h4>
-                    <p>Building trust through transparent and honest business practices</p>
+
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Integrity</h3>
+                    <p>Building trust through transparent communication, ethical practices, and reliable partnerships.</p>
                 </div>
-                <div class="value-item">
-                    <i class="fas fa-rocket"></i>
-                    <h4>Growth</h4>
-                    <p>Fostering continuous improvement and helping clients achieve ambitious goals</p>
+
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Growth</h3>
+                    <p>Fostering continuous improvement, learning, and helping clients and teams achieve ambitious goals.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Shantiram Meche, CEO of Frame Syndicate. All rights reserved.</p>
+        <p>&copy; 2026 Shantiram Meche. All rights reserved. | Frame Syndicate</p>
     </footer>
 </body>
 </html>
