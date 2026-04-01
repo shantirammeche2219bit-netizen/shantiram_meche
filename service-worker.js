@@ -51,33 +51,40 @@ self.addEventListener("fetch", (event) => {
           return response;
         })
         .catch(() => {
-          return caches.match(event.request).then((response) => {
-            return response || caches.match("./index.html");
+          // Fallback to cache if network fails
+          return caches.match(event.request).then((cachedResponse) => {
+            return cachedResponse || caches.match("./index.html");
           });
         })
     );
     return;
   }
 
-  // For other requests, try cache first, then network
+  // For all other requests (CSS, JS, images, fonts), cache first, network as fallback
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        return response;
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
       }
-      return fetch(event.request).then((networkResponse) => {
-        // Cache new resources dynamically
-        if (networkResponse && networkResponse.status === 200) {
-          const responseClone = networkResponse.clone();
+
+      return fetch(event.request)
+        .then((response) => {
+          // Cache successful responses
+          if (!response || response.status !== 200 || response.type !== "basic") {
+            return response;
+          }
+
+          const responseClone = response.clone();
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, responseClone);
           });
-        }
-        return networkResponse;
-      }).catch(() => {
-        // Return nothing for failed non-navigation requests
-        return new Response("", { status: 408, statusText: "Offline" });
-      });
+
+          return response;
+        })
+        .catch(() => {
+          // Return empty response for failed requests
+          return new Response("", { status: 408, statusText: "Offline" });
+        });
     })
   );
 });
