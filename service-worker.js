@@ -1,11 +1,15 @@
-const CACHE_NAME = "shantiram-meche-pwa-v2";
+const CACHE_NAME = "shantiram-meche-pwa-v3";
 
 const urlsToCache = [
   "/shantiram_meche/",
   "/shantiram_meche/index.html",
   "/shantiram_meche/style.css",
   "/shantiram_meche/me.jpeg",
-  "/shantiram_meche/manifest.json"
+  "/shantiram_meche/manifest.json",
+  "/shantiram_meche/icon-192.png",
+  "/shantiram_meche/icon-512.png",
+  "/shantiram_meche/icon-192-maskable.png",
+  "/shantiram_meche/icon-512-maskable.png"
 ];
 
 // Install
