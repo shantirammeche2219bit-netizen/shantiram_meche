@@ -6,8 +6,11 @@
     <title>Shantiram Meche | CEO & Founder - Frame Syndicate</title>
     
     <link rel="icon" href="/shantiram_meche/me.jpeg" type="image/jpeg">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#facc15">
+    <link rel="manifest" href="/shantiram_meche/manifest.json">
+    <meta name="theme-color" content="#1A3A52">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/shantiram_meche/me.jpeg">
     <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/">
     <meta name="description" content="Shantiram Meche - CEO & Founder of Frame Syndicate. Award-winning digital transformation leader and entrepreneur.">
     
@@ -42,9 +45,7 @@
                 <li><a href="./about.html" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-             <button id="installBtn" style="display:none;" class="btn btn-primary">
-                    Install App
-                    </button>
+
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -256,47 +257,24 @@
                 });
             });
         }
-const isIOS = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
-const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
 
-if (isIOS && !isStandalone) {
-  alert("To install: Tap Share → Add to Home Screen");
-}
+        // iOS PWA installation hint
+        const isIOS = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
 
-let deferredPrompt;
-const installBtn = document.getElementById("installBtn");
-
-// Detect install availability
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  installBtn.style.display = "block";
-});
-
-// Button click
-installBtn.addEventListener("click", async () => {
-  installBtn.style.display = "none";
-  deferredPrompt.prompt();
-  
-  const { outcome } = await deferredPrompt.userChoice;
-  console.log("User choice:", outcome);
-
-  deferredPrompt = null;
-});
-
-// Hide after install
-window.addEventListener("appinstalled", () => {
-  console.log("App installed");
-  installBtn.style.display = "none";
-});
+        if (isIOS && !isStandalone) {
+          console.log("iOS: To install, Tap Share → Add to Home Screen");
+        }
 
 
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./service-worker.js")
-      .then(reg => console.log("SW registered", reg))
-      .catch(err => console.log("SW failed", err));
+    navigator.serviceWorker.register("/shantiram_meche/service-worker.js", {
+      scope: "/shantiram_meche/"
+    })
+      .then(reg => console.log("✅ Service Worker registered:", reg.scope))
+      .catch(err => console.error("❌ Service Worker failed:", err));
   });
 }
 </script>
