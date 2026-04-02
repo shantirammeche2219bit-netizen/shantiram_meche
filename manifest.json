@@ -2,18 +2,19 @@
   "name": "Shantiram Meche Portfolio",
   "short_name": "Shantiram",
   "start_url": "/shantiram_meche/index.html",
+  "scope": "/shantiram_meche/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#facc15",
   "description": "CEO & Founder - Frame Syndicate",
   "icons": [
     {
-      "src": "me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "192x192",
       "type": "image/jpeg"
     },
     {
-      "src": "me.jpeg",
+      "src": "/shantiram_meche/me.jpeg",
       "sizes": "512x512",
       "type": "image/jpeg"
     }
