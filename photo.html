@@ -827,17 +827,6 @@
             }
         `;
         document.head.appendChild(style);
-
-        // Service Worker Registration
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/shantiram_meche/service-worker.js', {
-                scope: '/shantiram_meche/'
-            }).then(reg => {
-                console.log('Service Worker registered with scope:', reg.scope);
-            }).catch((error) => {
-                console.error('Service Worker registration failed:', error);
-            });
-        }
     </script>
 </body>
 </html>
