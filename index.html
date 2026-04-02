@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
     <title>Shantiram Meche | CEO & Founder - Frame Syndicate</title>
-    <link rel="manifest" href="manifest.json">
+<link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#ffcc00">
     <link rel="icon" href="/shantiram_meche/me.jpeg" type="image/jpeg">
     <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/">
@@ -261,9 +261,9 @@ if (isIOS && !isStandalone) {
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/shantiram_meche/sw.js")
-      .then(reg => console.log("Service Worker Registered", reg))
-      .catch(err => console.log("SW registration failed", err));
+    navigator.serviceWorker.register("sw.js")
+      .then(reg => console.log("✅ Service Worker Registered", reg))
+      .catch(err => console.log("❌ SW registration failed", err));
   });
 }
 </script>

@@ -6,16 +6,16 @@
   "background_color": "#0a0a0a",
   "theme_color": "#ffcc00",
   "orientation": "portrait",
-  "icons": [
-    {
-      "src": "me.jpeg",
-      "sizes": "192x192",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "me.jpeg",
-      "sizes": "512x512",
-      "type": "image/jpeg"
-    }
-  ]
+ "icons": [
+  {
+    "src": "/shantiram_meche/me.jpeg",
+    "sizes": "192x192",
+    "type": "image/jpeg"
+  },
+  {
+    "src": "/shantiram_meche/me.jpeg",
+    "sizes": "512x512",
+    "type": "image/jpeg"
+  }
+]
 }
