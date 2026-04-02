@@ -6,7 +6,8 @@
     <title>Shantiram Meche | CEO & Founder - Frame Syndicate</title>
     
     <link rel="icon" href="/shantiram_meche/me.jpeg" type="image/jpeg">
-    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#facc15">
     <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/">
     <meta name="description" content="Shantiram Meche - CEO & Founder of Frame Syndicate. Award-winning digital transformation leader and entrepreneur.">
     
@@ -40,6 +41,9 @@
                 <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
                 <li><a href="./about.html" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <button id="installBtn" style="display:none;" class="btn btn-primary">
+                    Install App
+                    </button>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -252,6 +256,49 @@
                 });
             });
         }
-    </script>
+const isIOS = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
+const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+
+if (isIOS && !isStandalone) {
+  alert("To install: Tap Share → Add to Home Screen");
+}
+
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
+
+// Detect install availability
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = "block";
+});
+
+// Button click
+installBtn.addEventListener("click", async () => {
+  installBtn.style.display = "none";
+  deferredPrompt.prompt();
+  
+  const { outcome } = await deferredPrompt.userChoice;
+  console.log("User choice:", outcome);
+
+  deferredPrompt = null;
+});
+
+// Hide after install
+window.addEventListener("appinstalled", () => {
+  console.log("App installed");
+  installBtn.style.display = "none";
+});
+
+
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(reg => console.log("SW registered", reg))
+      .catch(err => console.log("SW failed", err));
+  });
+}
+</script>
 </body>
 </html>
