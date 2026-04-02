@@ -1,4 +1,4 @@
-const CACHE_NAME = "shantiram-site-v1";
+const CACHE_NAME = "shantiram-site-v2";
 
 const urlsToCache = [
   "./",
@@ -7,7 +7,7 @@ const urlsToCache = [
   "./about.html",
   "./portfolio.html",
   "./style.css",
-  "./me.jpeg"
+  "./ok.png"
 ];
 
 self.addEventListener("install", event => {
