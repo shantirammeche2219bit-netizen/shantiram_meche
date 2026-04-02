@@ -6,13 +6,6 @@
     <title>Shantiram Meche | CEO & Founder - Frame Syndicate</title>
     
     <link rel="icon" href="/shantiram_meche/me.jpeg" type="image/jpeg">
-    <!-- PWA -->
-    <link rel="manifest" href="/shantiram_meche/manifest.json">
-    <meta name="theme-color" content="#1A3A52">
-    <link rel="apple-touch-icon" href="/shantiram_meche/me.jpeg">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Shantiram Meche">
     
     <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/">
     <meta name="description" content="Shantiram Meche - CEO & Founder of Frame Syndicate. Award-winning digital transformation leader and entrepreneur.">
@@ -892,17 +885,6 @@
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
                 });
-            });
-        }
-
-        // Service Worker Registration
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/shantiram_meche/service-worker.js', {
-                    scope: '/shantiram_meche/'
-                })
-                .then(reg => console.log('Service Worker registered confirmed', reg.scope))
-                .catch(err => console.log('Service Worker registration failed', err));
             });
         }
     </script>
