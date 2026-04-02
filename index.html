@@ -4,268 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
     <title>Shantiram Meche | CEO & Founder - Frame Syndicate</title>
-<link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#ffcc00">
-    <link rel="icon" href="/shantiram_meche/me.jpeg" type="image/jpeg">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffcc00">
+    <link rel="apple-touch-icon" href="./me.jpeg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- SEO -->
+    <link rel="icon" href="./me.jpeg" type="image/jpeg">
     <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/">
-    <meta name="description" content="Shantiram Meche - CEO & Founder of Frame Syndicate. Award-winning digital transformation leader and entrepreneur.">
-    
-    <!-- Generic Meta Tags -->
-    <meta name="color-scheme" content="light dark">
-    <meta name="supported-color-schemes" content="light dark">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Shantiram Meche | CEO & Founder - Frame Syndicate">
-    <meta property="og:description" content="Award-winning digital transformation leader and entrepreneur">
-    <meta property="og:image" content="me.jpeg">
-    <meta property="og:url" content="https://yoursite.com">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shantiram Meche">
-    <meta name="twitter:description" content="CEO & Founder of Frame Syndicate">
+    <meta name="description" content="Shantiram Meche - CEO & Founder of Frame Syndicate.">
+
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">Shantiram <span class="logo-yellow">Meche</span></a>
-            <ul class="nav-links">
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="./about.html" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Shantiram Meche</span></h1>
-                <p class="hero-subtitle">CEO & Founder of Frame Syndicate</p>
-                <p class="hero-description">Visionary entrepreneur and digital transformation leader helping enterprises transform their business through innovative IT solutions, strategic consulting, and cutting-edge technology implementations.</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="./portfolio.html" class="btn btn-secondary">View Work</a>
-                </div>
+<header>
+    <nav>
+        <a href="#" class="logo">Shantiram <span class="logo-yellow">Meche</span></a>
+        <ul class="nav-links">
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="./about.html" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Shantiram Meche</span></h1>
+            <p class="hero-subtitle">CEO & Founder of Frame Syndicate</p>
+            <p class="hero-description">
+                Visionary entrepreneur helping enterprises transform through innovative IT solutions.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="./portfolio.html" class="btn btn-secondary">View Work</a>
             </div>
 
-            <div class="hero-image-box">
-                <div class="image-frame">
-                    <img src="me.jpeg" alt="Shantiram Meche">
-                    <div class="frame-accent frame-accent-1"></div>
-                    <div class="frame-accent frame-accent-2"></div>
-                </div>
+            <!-- 🔥 INSTALL BUTTON -->
+            <button id="installBtn" style="margin-top:20px; display:none; padding:10px 20px; cursor:pointer;">
+                Install App
+            </button>
+        </div>
+
+        <div class="hero-image-box">
+            <div class="image-frame">
+                <img src="./me.jpeg" alt="Shantiram Meche">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="about-section">
-        <div class="about-content">
-            <div class="about-card">
-                <h3>Expertise</h3>
-                <p>Enterprise architecture, digital transformation, cloud solutions, and strategic IT leadership with deep technical knowledge and business acumen.</p>
-            </div>
-            <div class="about-card">
-                <h3>Experience</h3>
-                <p>10+ years in technology and business leadership. Founded and scaled Frame Syndicate to serve Fortune 500 companies and innovative startups.</p>
-            </div>
-            <div class="about-card">
-                <h3>Vision</h3>
-                <p>To empower organizations globally by delivering transformative technology solutions that drive sustainable growth and competitive advantage.</p>
-            </div>
-        </div>
-    </section>
+<section class="services" id="services">
+    <h2 style="text-align:center;">Services</h2>
+</section>
 
-    <section class="services" id="services">
-        <div class="services-container">
-            <div class="section-header">
-                <h2>Services & Solutions</h2>
-                <div class="yellow-bar"></div>
-            </div>
+<section class="contact" id="contact">
+    <h2 style="text-align:center;">Contact</h2>
+</section>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Cloud Infrastructure</h3>
-                    <p>Scalable, secure cloud architecture and migration services. Multi-cloud strategies optimized for enterprise performance.</p>
-                </div>
+<footer>
+    <p>&copy; 2026 Shantiram Meche</p>
+</footer>
 
-                <div class="service-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Enterprise Software</h3>
-                    <p>Custom application development using modern technology stacks. End-to-end solutions from architecture to deployment.</p>
-                </div>
+<script>
+// Mobile menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-                <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security frameworks and threat detection. Protect critical assets with enterprise-grade solutions.</p>
-                </div>
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+}
 
-                <div class="service-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>AI & Analytics</h3>
-                    <p>Machine learning solutions and predictive analytics. Unlock insights and automate complex business processes.</p>
-                </div>
+// ✅ SERVICE WORKER
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+            .then(() => console.log("✅ Service Worker Registered"))
+            .catch(err => console.log("❌ SW Failed", err));
+    });
+}
 
-                <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Digital Strategy</h3>
-                    <p>Strategic consulting for modernization and optimization. Navigate technology change with proven methodologies.</p>
-                </div>
+// 🔥 INSTALL BUTTON LOGIC
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
 
-                <div class="service-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Team & Support</h3>
-                    <p>Expert technical staffing and managed IT services. Augment capabilities with skilled professionals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = "block";
+});
 
-    <section class="portfolio">
-        <div class="portfolio-container">
-            <div class="portfolio-header">
-                <div class="portfolio-text">
-                    <h3>PORTFOLIO</h3>
-                    <h2>Success Stories & Case Studies</h2>
-                    <p>We've successfully delivered transformational projects across industries, helping organizations achieve measurable business impact through innovative technology solutions.</p>
-                    <a href="./portfolio.html" class="portfolio-link">View All Projects <i class="fas fa-arrow-right"></i></a>
-                </div>
+installBtn.addEventListener("click", () => {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+    }
+});
 
-                <div class="portfolio-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projects Delivered</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">20+</div>
-                        <div class="stat-label">Team Members</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years Operating</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-showcase">
-                <div class="project-card">
-                    <div class="project-icon">💼</div>
-                    <h4>Enterprise Finance</h4>
-                    <p>Global financial platform serving corporate clients with real-time processing and advanced analytics.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🛒</div>
-                    <h4>E-Commerce</h4>
-                    <p>Modern retail platform with inventory management, payment integration, and customer analytics.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🏥</div>
-                    <h4>Healthcare Tech</h4>
-                    <p>MedTech solutions for patient management, scheduling, and telemedicine capabilities.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🌐</div>
-                    <h4>IoT Solutions</h4>
-                    <p>Smart city network connecting devices for real-time monitoring and optimization.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">📱</div>
-                    <h4>Startup Ecosystem</h4>
-                    <p>Technology platform supporting rapid scaling for innovative startups and entrepreneurs.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">📲</div>
-                    <h4>Mobile Integration</h4>
-                    <p>Cross-platform mobile solutions with seamless backend integration and cloud sync.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <h2>Let's Work <span class="contact-yellow">Together</span></h2>
-            <p>Ready to transform your organization? Let's discuss how Frame Syndicate can help you achieve your digital goals and drive sustainable growth.</p>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p><a href="mailto:contact@framesyndicate.com">contact@framesyndicate.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <p>+1 (555) 123-4567</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Follow</h3>
-                    <p><a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
-                </div>
-            </div>
-
-            <a href="mailto:contact@framesyndicate.com" class="btn btn-primary" style="margin-top: 2rem;">Send Message</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Shantiram Meche. All rights reserved. | Frame Syndicate</p>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-
-            // Close menu when a link is clicked
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-        }
+// iOS fallback
 const isIOS = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
 const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
 
 if (isIOS && !isStandalone) {
-  alert("To install: Tap Share → Add to Home Screen");
-}
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js")
-      .then(reg => console.log("✅ Service Worker Registered", reg))
-      .catch(err => console.log("❌ SW registration failed", err));
-  });
+    alert("To install: Tap Share → Add to Home Screen");
 }
 </script>
+
 </body>
 </html>

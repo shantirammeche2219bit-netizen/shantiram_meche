@@ -1,16 +1,18 @@
 const CACHE_NAME = "shantiram-site-v1";
 
 const urlsToCache = [
-  "/shantiram_meche/",
-  "/shantiram_meche/index.html",
-  "/shantiram_meche/style.css",
-  "/shantiram_meche/me.jpeg",
-  "/shantiram_meche/portfolio.html",
-  "/shantiram_meche/about.html"
+  "./",
+  "./index.html",
+  "./services.html",
+  "./about.html",
+  "./portfolio.html",
+  "./style.css",
+  "./me.jpeg"
 ];
 
 // Install
 self.addEventListener("install", event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
@@ -30,9 +32,10 @@ self.addEventListener("activate", event => {
       )
     )
   );
+  self.clients.claim();
 });
 
-// Fetch (offline support)
+// Fetch
 self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request)
