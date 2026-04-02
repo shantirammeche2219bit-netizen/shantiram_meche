@@ -1,5 +1,5 @@
 // Version name (change when you update files)
-const CACHE_NAME = "pwa-cache-v9";
+const CACHE_NAME = "pwa-cache-v10";
 
 // Files to cache - Only index page content
 const ASSETS_TO_CACHE = [

@@ -2,12 +2,12 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square70x70logo src="me.jpeg"/>
-            <square150x150logo src="me.jpeg"/>
-            <square310x310logo src="me.jpeg"/>
-            <wide310x150logo src="me.jpeg"/>
+            <square70x70logo src="/shantiram_meche/me.jpeg"/>
+            <square150x150logo src="/shantiram_meche/me.jpeg"/>
+            <square310x310logo src="/shantiram_meche/me.jpeg"/>
+            <wide310x150logo src="/shantiram_meche/me.jpeg"/>
             <TileColor>#1A3A52</TileColor>
-            <TileImage src="me.jpeg"/>
+            <TileImage src="/shantiram_meche/me.jpeg"/>
         </tile>
     </msapplication>
 </browserconfig>

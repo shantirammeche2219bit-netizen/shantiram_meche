@@ -7,7 +7,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/shantiram_meche/manifest.json">
-    <link rel="icon" href="me.jpeg" type="image/jpeg">
+    <link rel="icon" href="/shantiram_meche/me.jpeg" type="image/jpeg">
     <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/">
     <meta name="theme-color" content="#1A3A52">
     <meta name="description" content="Shantiram Meche - CEO & Founder of Frame Syndicate. Award-winning digital transformation leader and entrepreneur.">
@@ -18,15 +18,15 @@
     <meta name="apple-mobile-web-app-title" content="Shantiram Meche">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="email=no">
-    <link rel="apple-touch-icon" href="me.jpeg" sizes="180x180">
-    <link rel="apple-touch-icon" href="me.jpeg" sizes="152x152">
-    <link rel="apple-touch-icon" href="me.jpeg" sizes="144x144">
-    <link rel="apple-touch-icon" href="me.jpeg" sizes="120x120">
+    <link rel="apple-touch-icon" href="/shantiram_meche/me.jpeg" sizes="180x180">
+    <link rel="apple-touch-icon" href="/shantiram_meche/me.jpeg" sizes="152x152">
+    <link rel="apple-touch-icon" href="/shantiram_meche/me.jpeg" sizes="144x144">
+    <link rel="apple-touch-icon" href="/shantiram_meche/me.jpeg" sizes="120x120">
     
     <!-- Microsoft Windows -->
     <meta name="msapplication-TileColor" content="#1A3A52">
-    <meta name="msapplication-TileImage" content="me.jpeg">
-    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileImage" content="/shantiram_meche/me.jpeg">
+    <meta name="msapplication-config" content="/shantiram_meche/browserconfig.xml">
     
     <!-- Android Chrome -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -913,9 +913,13 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/shantiram_meche/service-worker.js', {
                 scope: '/shantiram_meche/'
+            }).then((registration) => {
+                console.log('✅ Service Worker registered successfully:', registration.scope);
             }).catch((error) => {
-                console.error('Service Worker registration failed:', error);
+                console.error('❌ Service Worker registration failed:', error);
             });
+        } else {
+            console.warn('Service Worker not supported in this browser');
         }
     </script>
 </body>
