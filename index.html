@@ -6,7 +6,7 @@
     <title>Shantiram Meche | CEO & Founder - Frame Syndicate</title>
     
     <link rel="icon" href="/shantiram_meche/me.jpeg" type="image/jpeg">
-    <link rel="manifest" href="/shantiram_meche/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#facc15">
     <link rel="canonical" href="https://shantirammeche2219bit-netizen.github.io/shantiram_meche/">
     <meta name="description" content="Shantiram Meche - CEO & Founder of Frame Syndicate. Award-winning digital transformation leader and entrepreneur.">
@@ -41,10 +41,10 @@
                 <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
                 <li><a href="./about.html" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <button id="installBtn" style="display:none;" class="btn btn-primary">
+            </ul>
+             <button id="installBtn" style="display:none;" class="btn btn-primary">
                     Install App
                     </button>
-            </ul>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -294,7 +294,7 @@ window.addEventListener("appinstalled", () => {
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/shantiram_meche/service-worker.js")
+    navigator.serviceWorker.register("./service-worker.js")
       .then(reg => console.log("SW registered", reg))
       .catch(err => console.log("SW failed", err));
   });
